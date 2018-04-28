@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A Goal-Oriented Predicting and Decision Typology Model for Transit-Oriented Development</title>
+    <meta charset="utf-8">
+    <!-- CSS Imports -->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.css" />
+  </head>
+  <body>
+    <div class="titleBar">
+      <h1>A Goal-Oriented Predicting and Decision Typology Model for Transit-Oriented Development<h1>
+    </div>
+    <!-- Plotbar -->
+    <div class="sideBar">
+      <div class="sideBarTitle">
+        <h3 id="page1" >Transit stations with TOD Implementation during 1995 and 2005</h3>
+        <h3 id="page2" style= "display: none;">TOD Performance Index under Defined Goals</h3>
+        <h3 id="page3" style= "display: none;">Goal: Economic Development; Cluster: A</h3>
+        <h3 id="page4" style= "display: none;">Goal: Economic Development; Cluster: B</h3>
+        <h3 id="page5" style= "display: none;">Goal: Economic Development; Cluster: C</h3>
+        <h3 id="page6" style= "display: none;">Goal: Transit Ridership Increase; Cluster: D</h3>
+        <h3 id="page7" style= "display: none;">Goal: Transit Ridership Increase; Cluster: E</h3>
+        <h3 id="page8" style= "display: none;">Goal: Transit Ridership Increase; Cluster: F</h3>
+        <h3 id="page9" style= "display: none;">Conclusions and Top Achievers</h3>
+      </div>
+      <!-- for page2 -->
+
+      <!-- text on the page -->
+      <div id= "pagetext1">
+      <p class = "pagetext">This study attempts to build a predicting and decision
+        typology model based on statistical(regression, cluster analysis)
+        analysis of historic TOD data to provide clear guidelines for site
+        selection and choice of development strategy given specific goals for
+        decision-makers in public transit agency. The dataset is 145 station-areas
+        with TOD interventions between 1995 and 2005 in 15 states. Click to see each station.</p>
+      </div>
+      <div id="pagetext2" style= "display: none;">
+     <p class="pagetext">Promoting economic development and increasing transit
+       ridership are the two most frequently identified goals by transit agencies
+       (Cervero 2004). Two performance indexes, Economic Development Index (EDI)
+       and Travel Pattern Change Index (TPCI) are used to evaluate the success
+       of TOD under goals of economic development and increase transit Ridership
+       respectively, both of which are historic percent change index from 2005
+       to 2015. EDI consists of Unemployment rate decrease, Percent property
+       value increase, Vacancy rate decrease, Median household income increase,
+       and Percent population density increase. Select your TOD goal, click "See Stations' TOD Performance Index",
+       and click each station to see its performance index under your selected goal.</p>
+       Select TOD Goal:  <select name="Select TOD Goal" id="goals">
+       <option value=1>Economic Development</option>
+       <option value=2>Transit Ridership Increase</option>
+       </select>
+       <br>
+       <br>
+       <button id="my-button">See Stations' TOD Performance Indexes</button>
+
+     </div>
+     <div id="pagetext3" style= "display: none;">
+    <p class="pagetext">Clusters are cluster analysis results under certain goal's
+       pre-condition predicting performance index significant variables. Clusters
+       A, B, C are from the same cluster analysis under the goal of economic development,
+       and Clusters D, E, F are from the other cluster analysis model under the
+       goal of transit ridership increase.
+       30.7% percent less than high school,
+       9% unemployment rate, $37,102 median household income,
+         5.2% vacancy rate, median building age 45 years, 73% commute by car,
+         28.8 minutes median commute time, Cluster A's pre-development demographic
+         characters can be described as
+         'poor, historic, and auto-dependent'. Click to see each station in Cluster A. </p>
+     </div>
+     <div id= "pagetext4" style= "display: none;">
+    <p class="pagetext">21.4% percent less than high school, 14.1% unemployment rate,
+      $32,007 median household income, 11.9% vacancy rate,
+      median building age 43 years, 47.4% commute by car,
+      23.3 minutes median commute time,
+      Cluster B's pre-development demographic characters can be described as
+      'poor, historic, walkable'. Click to see each station in Cluster B.</p>
+     </div>
+     <div id= "pagetext5" style= "display: none;">
+    <p class="pagetext">11.2% percent less than high school, 3.8% unemployment rate,
+      $62,089 median household income, 4.9% vacancy rate,
+      median building age 32 years, 78.7% commute by car,
+      26.5 minutes median commute time,
+      Cluster C's pre-development demographic characters can be described as
+      'rich, new, auto-dependent'. Click to see each station in Cluster C.</p>
+     </div>
+     <div id= "pagetext6" style= "display: none;">
+    <p class="pagetext">20.2% structures with 50 units or more, gross rent $1,063,
+       average commute time 28.1 minutes,
+      Cluster D's pre-development demographic characters
+       can be described as 'rich, median density'. Note that Clusters A, B, C and
+       Clusters D, E, F are two groups of
+       cluster analysis results of significant performance predictors of
+       predevelopment conditions, so the variables to cluster stations into different
+       clusters are not the same, which means each station belongs to two clusters,
+     one among A, B, C, and the other among D, E, F. Click to see each station in Cluster D.</p>
+     </div>
+     <div id= "pagetext7" style= "display: none;">
+    <p class="pagetext">48.3% structures with 50 units or more, gross rent $702,
+       average commute time 22.7 minutes,
+      Cluster E's pre-development demographic characters
+       can be described as 'poor, high density'. Click to see each station in Cluster E.</p>
+     </div>
+     <div id= "pagetext8" style= "display: none;">
+    <p class="pagetext">11.7% structures with 50 units or more, gross rent $652,
+       average commute time 27.6 minutes,
+      Cluster F's pre-development demographic characters
+       can be described as 'poor, low density'. Click to see each station in Cluster F.</p>
+     </div>
+     <div id= "pagetext9" style= "display: none;">
+    <p class="pagetext">If the goal is to promote economic development, select a
+      site in pre-condition Type B (poor, historic, walkable) would have a higher
+      probability of good achievements; if the goal is to increase transit
+      ridership and change travel pattern, select a site in pre-condition Type D
+      (rich, median density) would have a higher probability of good achievements
+      Given site and goal, the development strategies of high achievers in the
+      site’s same pre-condition cluster might suggest a replicable development strategy.
+      Click to see the top achievers.</p>
+
+      </div>
+</div>
+    <!-- map -->
+    <div class="map" id="map"></div>
+    <!-- button -->
+
+     <button id="previous">&laquo;Previous</button>
+     <button id="next">Next &raquo;</button>
+
+
+    <!-- Javascript Imports -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.js"></script>
+
+    <script src="main.js"></script>
+  </body>
+</html>
